@@ -1,0 +1,12 @@
+### IF APPLIED THIS PR WILL ...
+- Example1
+- Example2
+
+### HAS THOSE CHANGES BEEN TESTED YET?
+- Yes/No,because...
+
+### DOES IT BRING A MAJOR CHANGE TO APP BEHAVIOUR?
+- Yes, because it is adding ... / No.
+
+### PICTURES FOR BETTER UNDERSTANDING
+- <-PICTURE->
