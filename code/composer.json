@@ -1,0 +1,8 @@
+{
+    "require": {
+        "botman/installer": "^1.0",
+        "symfony/cache": "^5.3",
+        "botman/driver-web": "^1.5",
+        "botman/driver-facebook": "^1.11"
+    }
+}

@@ -1,3 +1,56 @@
+ <script src="widget.js"></script>
+	  <script>
+        var botmanWidget = {
+            frameEndpoint: 'chat.html',
+            introMessage: 'Salutare! Cu ce te pot ajuta?',
+            chatServer : 'botman.php', 
+            title: 'Admitere UnitBV',
+            headerTextColor: '#fff',
+            mainColor: '#60645f',
+            bubbleAvatarUrl: '/media/bot-logo.png',
+            aboutLink: null,
+            aboutText: null,
+            placeholderText: 'Trimite un mesaj...'
+        }; 
+    </script>
+<script>
+var ready = true;
+
+// set interval
+setInterval(setready, 1000);
+function setready() {
+  ready = true;
+}
+
+$(document).on('DOMNodeInserted', "#messageArea", function() {
+  if(ready == true)
+  {
+  setTimeout(replacelink, 200);
+  ready = false;
+  }
+});
+
+function replacelink() {
+  $('#messageArea .btn').each(function(){
+      text = $(this).html();
+      link = text.match(/(Link:)\s(\/[^<]*)/g);
+      if(link)
+      {
+        $(this).html(' ');
+        url = link.toString().substring(5);
+        text = text.match(/(.*)(Link:)/g).toString().substring(0,5);
+        $(this).empty();
+        $(this).html('<a href="' + url + '">' + text + '</a>');
+        $(this).addClass('linked');
+      }
+      else
+      {
+        $(this).addClass('linked');
+      }
+  });
+}
+
+</script>
 <!DOCTYPE html>
 <html>
 <title>ChatBot Admitere</title>
