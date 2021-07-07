@@ -22,7 +22,7 @@ $adapter = new FilesystemAdapter();
 
 $botman = BotManFactory::create($config, new SymfonyCache($adapter));
 
-$botman->hears('.*(inscriu|aplica).*.*multe.*.*facultati.*', function($bot) {
+$botman->hears('.*(inscri|aplic|înscri).*.*multe.*.*facult.*', function($bot) {
     
     $bot->startConversation(new MoreFaculties);
     
@@ -50,6 +50,11 @@ $botman->hears('.*(prima|ultima).*.*medie.*', function($bot) {
 $botman->hears('.*unde.*.*(achit|platesc).*.*taxa.*', function($bot) {
     
     $bot->startConversation(new payTax);
+    
+});
+$botman->hears('.*(treaba|munca).*.*bun.*.*licen.*', function($bot) {
+    
+    $bot->startConversation(new licentaTest);
     
 });
 $botman->hears('.*(admis|acceptat).*.*confirm.*.*loc.*', function($bot) {

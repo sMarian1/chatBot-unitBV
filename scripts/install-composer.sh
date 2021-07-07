@@ -1,5 +1,5 @@
 #!/bin/sh
-set pipefail
+
 if ! which composer > /dev/null; then
     echo "Update package manager"
     apt-get update

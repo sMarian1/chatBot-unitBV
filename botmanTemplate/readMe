@@ -1,0 +1,23 @@
+#####Important##########
+
+TO DO CHATBOT TO YOUR PAGE YOU NEED TO COPY BELOW SCRIPTS TO YOUR INDEX.HTML INDEX.PHP FILE.
+
+
+COPY THOSE SCRIPTS AT THE BEGGINING OF YOUR INDEX FILE
+
+
+<script src="widget.js"></script>
+<script>
+    var botmanWidget = {
+        frameEndpoint: 'chat.html',
+        introMessage: 'Salutare! Cu ce te pot ajuta?',
+        chatServer : 'botman.php', 
+        title: 'Chatbot',
+        headerTextColor: '#fff',
+        mainColor: '#60645f',
+        bubbleAvatarUrl: 'https://www.applozic.com/assets/resources/images/Chat-Bot-Icon@512px.svg',
+        aboutLink: null,
+        aboutText: null,
+        placeholderText: 'Trimite un mesaj...'
+    }; 
+</script>
